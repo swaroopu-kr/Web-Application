@@ -1,6 +1,10 @@
     // Constants  
     BASE_URL = 'https://randomuser.me/api/?inc=';
-    API_KEY ="gender,name,location,email,login,DOB,phone"
+    API_KEY =" <form style="margin-top: 50px;">
+    <label>
+      <input type="text" placeholder="City">
+    </label>
+  <input type="submit" value="Get Weather">"
     // State Variables
 
     let apiData;
@@ -16,7 +20,19 @@ $form.on('submit', handleSubmit);
 
 getData();
 
-
+  
+function handleSubmit(evt) {
+  evt.preventDefault();
+  const currCity = $input.val();
+  console.log(currCity)
+    $.ajax(`${BASE_URL}${currCity}&appid=${API_KEY}&units=imperial`)
+    .then(function(data) {
+      weatherData = data
+    render();
+  }, function (error){
+    console.log("error:", error)
+  })
+}
 
 function getData () {
 $.ajax(BASE_URL)

@@ -1,6 +1,6 @@
     // Constants  
-    BASE_URL = 'https://randomuser.me/api/?inc=';
-    API_KEY ="gender,name,location,email,login,DOB,phone"
+    BASE_URL = 'https://randomuser.me/api/?inc=gender,name,location,email,login,DOB,phone';
+    
     // State Variables
 
     let apiData;
@@ -16,7 +16,19 @@ $form.on('submit', handleSubmit);
 
 getData();
 
-
+  
+function handleSubmit(evt) {
+  evt.preventDefault();
+  const currCity = $input.val();
+  console.log(currCity)
+    $.ajax(`${BASE_URL}${currCity}&appid=${API_KEY}&units=imperial`)
+    .then(function(data) {
+      weatherData = data
+    render();
+  }, function (error){
+    console.log("error:", error)
+  })
+}
 
 function getData () {
 $.ajax(BASE_URL)
@@ -55,32 +67,34 @@ $main.html('<section>${userData}</section>');
 }
 
 
-//weather lab code
-
-// Functions
-function handleSubmit(evt) {
-  evt.preventDefault();
-  const gen = $input.val();
-  console.log(gen)
-    $.ajax(`${BASE_URL}${gen}`)
-    .then(function(data) {
-      apiData = data
-    render();
-  }, function (error){
-    console.log("error:", error)
-  })
-}
 
 
 
-function render () {
-  $main.html(
-    // create p tags with weatherData values interpolated within them
-    `
-    <p>Weather For: ${weatherData.name}</p>
-    <p>Temperature: ${weatherData.main.temp}&#176;</p>
-    <p>Feels Like: ${weatherData.main.feels_like}&#176;</p>
-    <p>Weather: ${weatherData.weather[0].description}</p>
-    `
-  )
-  }
+
+
+
+   
+/*  
+  
+};
+
+
+
+
+    // add data as text content to our DOM elements
+    function render () {
+      $main.html(
+        // create p tags with weatherData values interpolated within them
+        `
+     
+     
+     
+     
+        `
+      )
+    }
+  
+   //})
+  
+
+  */

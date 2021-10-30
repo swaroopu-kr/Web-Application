@@ -1,6 +1,6 @@
     // Constants  
-    BASE_URL = 'https://randomuser.me/api/?inc=';
-    API_KEY ="gender,name,location,email,login,DOB,phone"
+    BASE_URL = 'https://randomuser.me/api/?inc=gender,name,location,email,login,DOB,phone';
+    
     // State Variables
 
     let apiData;
@@ -16,7 +16,19 @@ $form.on('submit', handleSubmit);
 
 getData();
 
-
+  
+function handleSubmit(evt) {
+  evt.preventDefault();
+  const currCity = $input.val();
+  console.log(currCity)
+    $.ajax(`${BASE_URL}${currCity}&appid=${API_KEY}&units=imperial`)
+    .then(function(data) {
+      weatherData = data
+    render();
+  }, function (error){
+    console.log("error:", error)
+  })
+}
 
 function getData () {
 $.ajax(BASE_URL)
@@ -60,11 +72,11 @@ $main.html('<section>${userData}</section>');
 // Functions
 function handleSubmit(evt) {
   evt.preventDefault();
-  const gen = $input.val();
-  console.log(gen)
-    $.ajax(`${BASE_URL}${gen}`)
+  const currCity = $input.val();
+  console.log(currCity)
+    $.ajax(`${BASE_URL}${currCity}&appid=${API_KEY}&units=imperial`)
     .then(function(data) {
-      apiData = data
+      weatherData = data
     render();
   }, function (error){
     console.log("error:", error)
@@ -83,4 +95,33 @@ function render () {
     <p>Weather: ${weatherData.weather[0].description}</p>
     `
   )
-  }
+
+
+
+
+
+   
+/*  
+  
+};
+
+
+
+
+    // add data as text content to our DOM elements
+    function render () {
+      $main.html(
+        // create p tags with weatherData values interpolated within them
+        `
+     
+     
+     
+     
+        `
+      )
+    }
+  
+   //})
+  
+
+  */

@@ -1,0 +1,81 @@
+    // Constants
+    BASE_URL = 'https://randomuser.me/api/?inc=gender,name,location,email,login,DOB,phone';
+    
+    // State Variables
+
+    let apiData;
+  
+    // Cached Element References
+    const $main = $('main');
+  
+// Event Listeners
+
+$main.on('click', 'article', handleClick);
+
+getData();
+
+
+function getData () {
+$.ajax(BASE_URL)
+.then(function(data){
+apiData = data;
+render();
+}, function(error) {
+
+});
+} //close function
+
+function handleClick () {
+$(this).children().toggleClass('hidden');
+}
+
+
+function render (){
+  apiData.map(function(){
+return`
+
+<article style="background-image: url(${photoObject.url})">
+<h3>${photoObject.title}</h3>
+<p class="hidden">${photoObject.explanation}</p>
+</article>`;
+
+
+// <p>Weather For: ${weatherData.name}</p>
+// <p>Temperature: ${weatherData.main.temp}&#176;</p>
+// <p>Feels Like: ${weatherData.main.feels_like}&#176;</p>
+// <p>Weather: ${weatherData.weather[0].description}</p>
+
+
+}).join(''); 
+
+$main.html('<section>${userData}</section>');
+
+}
+
+
+
+   
+/*  
+  
+};
+
+
+
+
+    // add data as text content to our DOM elements
+    function render () {
+      $main.html(
+        // create p tags with weatherData values interpolated within them
+        `
+     
+     
+     
+     
+        `
+      )
+    }
+  
+   //})
+  
+
+  */

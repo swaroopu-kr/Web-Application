@@ -35,15 +35,7 @@ render();
 } //close function
 
 function handleClick () {
-$(this).children().toggleClass('hidden');
-}
-
-
-function render (){
-
-
-
-  
+$(this).children
 }
 
 

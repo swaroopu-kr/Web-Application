@@ -39,14 +39,6 @@ $(this).children().toggleClass('hidden');
 }
 
 
-function render (){
-
-
-
-  
-}
-
-
     // Functions
   
     function handleSubmit(evt) {

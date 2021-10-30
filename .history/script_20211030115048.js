@@ -39,12 +39,7 @@ $(this).children().toggleClass('hidden');
 }
 
 
-function render (){
-
-
-
-  
-}
+function 
 
 
     // Functions

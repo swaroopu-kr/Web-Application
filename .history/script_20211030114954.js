@@ -34,17 +34,7 @@ render();
 });
 } //close function
 
-function handleClick () {
-$(this).children().toggleClass('hidden');
-}
-
-
-function render (){
-
-
-
-  
-}
+function hand
 
 
     // Functions

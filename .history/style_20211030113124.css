@@ -35,15 +35,13 @@
       main {
         grid-area: content;
         background-color: #1c1e6d;
-        color: white;
-        display: flex;
-        justify-content: left;
-        align-items: left;
+        color
       }
       
       header,
       footer,
-      aside {
+      aside,
+      main {
         display: flex;
         justify-content: center;
         align-items: center;

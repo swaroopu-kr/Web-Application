@@ -25,14 +25,10 @@ getData();
 
 
 function getData () {
-$ajax.(BASE_URL)
-.then(function(data){
-apiData = data;
-render();
-}, function(error) {
+$aja
 
-});
-} //close function
+
+}
 
 
 

@@ -32,7 +32,7 @@ render();
 }, function(error) {
 
 });
-} //close function
+}
 
 
 

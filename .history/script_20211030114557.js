@@ -24,16 +24,6 @@ $main.on('click', 'article', handleClick);
 getData();
 
 
-function getData () {
-$ajax.(BASE_URL)
-.then(function(data){
-apiData = data;
-render();
-}, function(error) {
-
-});
-} //close function
-
 
 
 

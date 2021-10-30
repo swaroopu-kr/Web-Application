@@ -22,21 +22,12 @@
 $main.on('click', 'article', handleClick);
 
 getData();
-
-
-function getData () {
-$ajax.(BASE_URL)
-.then(function(data){
-apiData = data;
-render();
-}, function(error) {
-
-});
-} //close function
-
-
-
-
+    // vars 
+    let user;
+  
+    // Event Listener
+    $form.on('submit', handleSubmit);
+  
     // Functions
   
     function handleSubmit(evt) {

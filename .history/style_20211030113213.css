@@ -43,7 +43,8 @@
       
       header,
       footer,
-      aside {
+      aside,
+      main {
         display: flex;
         justify-content: center;
         align-items: center;

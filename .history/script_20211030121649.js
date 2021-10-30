@@ -1,5 +1,5 @@
     // Constants
-    BASE_URL = 'https://randomuser.me/api/?inc=gender,name,location,email,login,DOB,phone';
+    BASE_URL = 'https://randomuser.me/api/?inc=gender,name,location,email,login,DOB,phone;';
     
     // State Variables
 
@@ -31,7 +31,7 @@ $(this).children().toggleClass('hidden');
 
 
 function render (){
-const userData = apiData.map(function(){
+const userData = api.map(function(){
 return``
 
 

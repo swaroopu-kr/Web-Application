@@ -31,7 +31,7 @@ $(this).children().toggleClass('hidden');
 
 
 function render (){
-const userData = apiData.map(function(){
+const userData = api.map(function(){
 return``
 
 

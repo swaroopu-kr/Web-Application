@@ -1,12 +1,21 @@
+//IIFE FUNCTION
+//$(function () {
+
+
+
+
+
     // Constants
-    BASE_URL = 'https://randomuser.me/api/?inc=gender,name,location,email,login,DOB,phone';
-    
+    BASE_URL = 'https://randomuser.me/api/?inc=gender,name,location,email,login,DOB,phone,picture';
+
     // State Variables
 
     let apiData;
   
     // Cached Element References
+    const $input = $('input[type="text"]')
     const $main = $('main');
+    const $form = $('form');
   
 // Event Listeners
 
@@ -16,7 +25,7 @@ getData();
 
 
 function getData () {
-$.ajax(BASE_URL)
+$ajax.(BASE_URL)
 .then(function(data){
 apiData = data;
 render();
@@ -31,30 +40,27 @@ $(this).children().toggleClass('hidden');
 
 
 function render (){
-const userData = apiData.map(function(){
-return``
-
-
-
-
-// <p>Weather For: ${weatherData.name}</p>
-// <p>Temperature: ${weatherData.main.temp}&#176;</p>
-// <p>Feels Like: ${weatherData.main.feels_like}&#176;</p>
-// <p>Weather: ${weatherData.weather[0].description}</p>
-
+const userData = api.map(function(){}
+return`
 
 }).join(''); 
-
-$main.html('<section>${userData}</section>');
-
+$main.html('<section>${user}</section>');
+  
 }
 
 
-
-   
-/*  
+    // Functions
   
+    function handleSubmit(evt) {
+      evt.preventDefault();
+      const currCity = $input.val();
+      console.log(currCity)
+        $.ajax({BASE_URL}
+  success: function(data) {
+    console.log(data);
+  })
 };
+        
 
 
 
@@ -75,4 +81,5 @@ $main.html('<section>${userData}</section>');
    //})
   
 
-  */
+
+  

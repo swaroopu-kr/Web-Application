@@ -1,12 +1,14 @@
     // Constants
-    BASE_URL = 'https://randomuser.me/api/?inc=gender,name,location,email,login,DOB,phone';
-    
+    BASE_URL = 'https://randomuser.me/api/?inc=gender,name,location,email,login,DOB,phone,picture';
+
     // State Variables
 
     let apiData;
   
     // Cached Element References
+    const $input = $('input[type="text"]')
     const $main = $('main');
+    const $form = $('form');
   
 // Event Listeners
 
@@ -31,8 +33,8 @@ $(this).children().toggleClass('hidden');
 
 
 function render (){
-const userData = apiData.map(function(){
-return``
+const userData = api.map(function(){
+return`
 
 
 
@@ -42,10 +44,10 @@ return``
 // <p>Feels Like: ${weatherData.main.feels_like}&#176;</p>
 // <p>Weather: ${weatherData.weather[0].description}</p>
 
-
+`
 }).join(''); 
 
-$main.html('<section>${userData}</section>');
+$main.html('<section>${user}</section>');
 
 }
 

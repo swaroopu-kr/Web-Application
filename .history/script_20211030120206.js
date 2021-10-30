@@ -1,12 +1,21 @@
+//IIFE FUNCTION
+//$(function () {
+
+
+
+
+
     // Constants
-    BASE_URL = 'https://randomuser.me/api/?inc=gender,name,location,email,login,DOB,phone';
-    
+    BASE_URL = 'https://randomuser.me/api/?inc=gender,name,location,email,login,DOB,phone,picture';
+
     // State Variables
 
     let apiData;
   
     // Cached Element References
+    const $input = $('input[type="text"]')
     const $main = $('main');
+    const $form = $('form');
   
 // Event Listeners
 
@@ -16,7 +25,7 @@ getData();
 
 
 function getData () {
-$.ajax(BASE_URL)
+$ajax.(BASE_URL)
 .then(function(data){
 apiData = data;
 render();
@@ -31,28 +40,21 @@ $(this).children().toggleClass('hidden');
 
 
 function render (){
-const userData = apiData.map(function(){
-return``
-
-
-
-
-// <p>Weather For: ${weatherData.name}</p>
-// <p>Temperature: ${weatherData.main.temp}&#176;</p>
-// <p>Feels Like: ${weatherData.main.feels_like}&#176;</p>
-// <p>Weather: ${weatherData.weather[0].description}</p>
-
+const userData = api.map(function(){}
+return`
 
 }).join(''); 
+$main.html('<section>${user}</section>');
 
-$main.html('<section>${userData}</section>');
-
+<p>Weather For: ${weatherData.name}</p>
+<p>Temperature: ${weatherData.main.temp}&#176;</p>
+<p>Feels Like: ${weatherData.main.feels_like}&#176;</p>
+<p>Weather: ${weatherData.weather[0].description}</p>
 }
 
-
-
    
-/*  
+   
+  
   
 };
 
@@ -75,4 +77,5 @@ $main.html('<section>${userData}</section>');
    //})
   
 
-  */
+
+  

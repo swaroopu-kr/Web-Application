@@ -1,0 +1,59 @@
+
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        height: 100vh;
+        margin: 0;
+        font-family: Helvetica;
+        display: grid;
+        /* mobile first - single column */
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 30px auto 100px;
+         
+      }
+      
+      header {
+        grid-area: hdr;
+        background-color: #696e7e;
+      }
+      
+      footer {
+        grid-area: ftr;
+        background-color: #b1fcc8;
+      }
+      
+      aside{
+
+        background-color: #0421188a;
+
+      }
+      
+      
+      
+      main {
+        grid-area: content;
+        background-color: #1c1e6d;
+      }
+      
+      header,
+      footer,
+      aside,
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      @media only screen and (min-width: 768px) {
+        body {
+          grid-template-columns: 1fr 4fr;
+          grid-template-rows: 50px auto 30px;
+          grid-template-areas: 
+          "hdr hdr"
+          "side content"
+          "ftr ftr";
+        }
+      
+      }

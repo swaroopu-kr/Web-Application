@@ -23,7 +23,7 @@ function parseJSON(seperate) {
 function newUser(profile) {
   $main.html(`
 
-  <img src="${profile.results[0].picture.medium}">
+  <img src="${profile.results[0].picture.medium} width=40px">
   <p>Name: ${profile.results[0].name.first + " " + profile.results[0].name.last}</p>
 
   <p>Sex: ${profile.results[0].gender}</p>

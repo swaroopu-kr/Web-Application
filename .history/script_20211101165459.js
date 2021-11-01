@@ -1,7 +1,7 @@
 
 
 
-BASE_URL = 'https://randomuser.me/api/?results=4';
+BASE_URL = 'https://randomuser.me/api/?results=3';
 
 const $main = $('main');
 
@@ -70,13 +70,13 @@ function newUser(profile) {
   <div class="grid-item">
   <br>
   <img src="${profile.results[3].picture.medium}">
-  <p>Name: ${profile.results[3].name.first + " " + profile.results[3].name.last}</p>
+  <p>Name: ${profile.results[3].name.first + " " + profile.results[2].name.last}</p>
   <p>Sex: ${profile.results[3].gender}</p>
   <p>Age: ${profile.results[3].dob.age}</p>
   <p>User Name: ${profile.results[3].login.username}</p>
-  <p>Email: ${profile.results[3].email}</p>
-  <p>Location: ${ profile.results[3].location.city + " " + profile.results[2].location.state}</p>
-  <p>Phone: ${ profile.results[3].cell}</p>
+  <p>Email: ${profile.results[2].email}</p>
+  <p>Location: ${ profile.results[2].location.city + " " + profile.results[2].location.state}</p>
+  <p>Phone: ${ profile.results[2].cell}</p>
   
   
   </div>

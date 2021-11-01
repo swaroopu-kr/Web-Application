@@ -1,7 +1,7 @@
 
 
 
-BASE_URL = 'https://randomuser.me/api/?results=4';
+BASE_URL = 'https://randomuser.me/api/?results=3';
 
 const $main = $('main');
 

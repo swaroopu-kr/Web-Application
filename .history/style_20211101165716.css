@@ -5,7 +5,6 @@
       
       body {
         height: 100vh;
-        width: 90%;
         margin: 0;
         font-family: Helvetica;
         display: grid;
@@ -59,7 +58,6 @@
 
 
     div, main {
-
       display: table;
       padding: 1rem;
       border-radius: 7px;
@@ -81,7 +79,7 @@
     .grid-item {
       background: #F90;
       border-top: solid 1px #000;
-      max-width: 20%;
+      max-width: ;;
     }
     .grid-item:nth-child(odd) {
       background: #F00;

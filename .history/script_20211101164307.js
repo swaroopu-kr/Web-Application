@@ -66,21 +66,7 @@ function newUser(profile) {
   <p>Email: ${profile.results[2].email}</p>
   <p>Location: ${ profile.results[2].location.city + " " + profile.results[2].location.state}</p>
   <p>Phone: ${ profile.results[2].cell}</p>
-  </div>
-  <div class="grid-item">
-  <br>
-  <img src="${profile.results[2].picture.medium}">
-  <p>Name: ${profile.results[2].name.first + " " + profile.results[2].name.last}</p>
-  <p>Sex: ${profile.results[2].gender}</p>
-  <p>Age: ${profile.results[2].dob.age}</p>
-  <p>User Name: ${profile.results[2].login.username}</p>
-  <p>Email: ${profile.results[2].email}</p>
-  <p>Location: ${ profile.results[2].location.city + " " + profile.results[2].location.state}</p>
-  <p>Phone: ${ profile.results[2].cell}</p>
   
-  
-  </div>
-  </div>
 `);
 
   return;

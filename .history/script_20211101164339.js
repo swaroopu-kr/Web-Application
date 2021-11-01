@@ -68,7 +68,7 @@ function newUser(profile) {
   <p>Phone: ${ profile.results[2].cell}</p>
   </div>
   <div class="grid-item">
-  <br>
+  
   <img src="${profile.results[2].picture.medium}">
   <p>Name: ${profile.results[2].name.first + " " + profile.results[2].name.last}</p>
   <p>Sex: ${profile.results[2].gender}</p>

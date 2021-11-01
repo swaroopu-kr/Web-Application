@@ -22,7 +22,6 @@
       footer {
         grid-area: ftr;
         background-color: #b1fcc8;
-        align-self:bottom;
       }
       
       aside{
@@ -57,31 +56,36 @@
 
 
 
-    div, main {
-      display: table;
+      .square {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 75px;
+    }
+
+
+    #p, main {
+      display: flex;
+      flex-direction: row;
       padding: 1rem;
+      background-size: cover;
+      background-position: center;
       border-radius: 7px;
       margin: .15rem;
       text-shadow: 2px 3px 5px #000000;
-      /* rem stands for root element metric - by default it's equal to 16 */
-      grid-area: content;
+      width: 18.75rem;
+      height: 12.5rem; /* rem stands for root element metric - by default it's equal to 16 */
+       
+        grid-area: content;
+        background-color: #1c1e6d;
         color: white;
+        justify-content: center;
         align-items: left;
+      
+  
+  
     }
 
-
-
-    .flex-grid {
-      display: flex;
-      height: 500px;
-      width: 45%;
-    }
-    .grid-item {
-      background: #F90;
-      border-top: solid 1px #000;
-    }
-    .grid-item:nth-child(odd) {
-      background: #F00;
-      flex: 1 0 50px;
-
-    }
+  

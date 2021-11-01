@@ -73,6 +73,7 @@
 
     .flex-grid {
       display: flex;
+      flex-wrap: ;
       height: 500px;
       width: 45%;
     }

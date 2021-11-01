@@ -22,7 +22,6 @@
       footer {
         grid-area: ftr;
         background-color: #b1fcc8;
-        align-self:bottom;
       }
       
       aside{
@@ -57,8 +56,8 @@
 
 
 
-    div, main {
-      display: table;
+    #p, main {
+      display: flex;
       padding: 1rem;
       border-radius: 7px;
       margin: .15rem;
@@ -73,15 +72,19 @@
 
     .flex-grid {
       display: flex;
+      flex-wrap: wrap;
       height: 500px;
-      width: 45%;
+      width: 50%;
     }
     .grid-item {
+      flex: 1 1 calc(100% - 50px);
       background: #F90;
       border-top: solid 1px #000;
+      width: 50%;
     }
     .grid-item:nth-child(odd) {
       background: #F00;
-      flex: 1 0 50px;
+      flex: 0 0 50px;
+      width: 50%;
 
     }

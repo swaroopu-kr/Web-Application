@@ -73,12 +73,14 @@
 
     .flex-grid {
       display: flex;
+      flex-wrap: wrap;
       height: 500px;
       width: 45%;
     }
     .grid-item {
       background: #F90;
       border-top: solid 1px #000;
+      width: 5%;
     }
     .grid-item:nth-child(odd) {
       background: #F00;
